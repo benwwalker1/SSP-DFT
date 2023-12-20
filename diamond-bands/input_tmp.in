@@ -1,0 +1,5 @@
+&bands
+    prefix='diamond'
+    outdir='./tmp'
+    filband='bandsdata'
+/

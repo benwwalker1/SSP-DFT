@@ -1,0 +1,26 @@
+&control
+    calculation = 'scf'
+    restart_mode='from_scratch',
+    prefix='graphene',
+    pseudo_dir = './',
+    outdir='./tmp/'
+    /
+&system
+    ibrav = 4, 
+    celldm(1) = 4.65,
+    celldm(3) = 4,
+    nat= 2, 
+    ntyp= 1,
+    ecutwfc = 75.0
+    /
+&electrons
+    diagonalization='david'
+    conv_thr =  1.0d-8
+    /
+ATOMIC_SPECIES
+    C  12.0107  C.UPF
+ATOMIC_POSITIONS  { crystal }
+    C 0.00 0.00 0.00
+    C 0.333333 0.666666 0.00
+K_POINTS { automatic }
+    8 8 1  1 1 1 

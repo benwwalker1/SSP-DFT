@@ -1,0 +1,157 @@
+
+     Program PWSCF v.6.6 starts on 20Dec2023 at 10:57:37 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on     1 processors
+
+     MPI processes distributed on     1 nodes
+     Fft bands division:     nmany     =       1
+     Waiting for input...
+     Reading input from standard input
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  3
+
+     Atomic positions and unit cell read from directory:
+     ./tmp/diamond.save/
+     Atomic positions from file used, from input discarded
+
+
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     a serial algorithm will be used
+
+
+     G-vector sticks info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Sum         421     421    121                 5577     5577     941
+
+
+
+     bravais-lattice index     =            2
+     lattice parameter (alat)  =       6.7500  a.u.
+     unit-cell volume          =      76.8867 (a.u.)^3
+     number of atoms/cell      =            2
+     number of atomic types    =            1
+     number of electrons       =         8.00
+     number of Kohn-Sham states=           10
+     kinetic-energy cutoff     =      65.0000  Ry
+     charge density cutoff     =     260.0000  Ry
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=   6.650000  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (  -0.500000   0.000000   0.500000 )  
+               a(2) = (   0.000000   0.500000   0.500000 )  
+               a(3) = (  -0.500000   0.500000   0.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = ( -1.000000 -1.000000  1.000000 )  
+               b(2) = (  1.000000  1.000000  1.000000 )  
+               b(3) = ( -1.000000  1.000000 -1.000000 )  
+
+
+     PseudoPot. # 1 for C  read from file:
+     ./C.UPF
+     MD5 check sum: ead9220225bd72a2f9a48cc2a638047d
+     Pseudo is Norm-conserving + core correction, Zval =  4.0
+     Generated using ONCVPSP code by D. R. Hamann
+     Using radial grid of 1248 points,  4 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+
+     atomic species   valence    mass     pseudopotential
+        C              4.00    12.01070     C ( 1.00)
+
+     48 Sym. Ops., with inversion, found (24 have fractional translation)
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           C   tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           C   tau(   2) = (  -0.2500000   0.2500000   0.2500000  )
+
+     number of k points=   101
+
+     Number of k-points >= 100: set verbosity='high' to print them.
+
+     Dense  grid:     5577 G-vectors     FFT dimensions: (  32,  32,  32)
+
+     Estimated max dynamical RAM per process >       3.95 MB
+
+     The potential is recalculated from file :
+     ./tmp/diamond.save/charge-density
+
+     Starting wfcs are    8 randomized atomic wfcs +    2 random wfcs
+
+     Band Structure Calculation
+     Davidson diagonalization with overlap
+
+     ethr =  1.25E-10,  avg # of iterations = 18.9
+
+     total cpu time spent up to now is        8.2 secs
+
+     End of band structure calculation
+
+     Number of k-points >= 100: set verbosity='high' to print the bands.
+
+     Writing output data file ./tmp/diamond.save/
+
+     init_run     :      0.10s CPU      0.06s WALL (       1 calls)
+     electrons    :     79.84s CPU      8.04s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      0.00s CPU      0.00s WALL (       1 calls)
+     potinit      :      0.03s CPU      0.02s WALL (       1 calls)
+     hinit0       :      0.06s CPU      0.03s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :     79.84s CPU      8.04s WALL (       1 calls)
+     v_of_rho     :      0.02s CPU      0.02s WALL (       1 calls)
+
+     Called by c_bands:
+     init_us_2    :      0.07s CPU      0.01s WALL (     101 calls)
+     cegterg      :     74.19s CPU      7.45s WALL (     135 calls)
+
+     Called by *egterg:
+     cdiaghg      :      2.22s CPU      0.25s WALL (    2010 calls)
+     h_psi        :     66.68s CPU      6.62s WALL (    2145 calls)
+     g_psi        :      0.17s CPU      0.03s WALL (    1909 calls)
+
+     Called by h_psi:
+     h_psi:calbec :      6.05s CPU      0.56s WALL (    2145 calls)
+     vloc_psi     :     55.28s CPU      5.52s WALL (    2145 calls)
+     add_vuspsi   :      5.24s CPU      0.53s WALL (    2145 calls)
+
+     General routines
+     calbec       :      6.00s CPU      0.55s WALL (    2145 calls)
+     fft          :      0.01s CPU      0.01s WALL (      11 calls)
+     fftw         :     46.79s CPU      4.64s WALL (   28390 calls)
+     davcio       :      0.11s CPU      0.01s WALL (     202 calls)
+
+     Parallel routines
+
+     PWSCF        :   1m20.33s CPU      8.30s WALL
+
+
+   This run was terminated on:  10:57:45  20Dec2023            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
