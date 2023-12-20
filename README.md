@@ -4,6 +4,28 @@
 
 A set of four quantum espresso simulation configurations to solve for various material/chemical properties.
 
+## Installation
+
+Install the latest Python and Quantum Espresso (QE) versions, and ensure the QE binaries `pw.x` and `bands.x` are your `$PATH` variable.
+
+## Usage
+
+### diamond-scf Usage
+
+Run the `e-cutoff.py`,`k-points.py`, and `lattice.py` scripts in the `diamond-scf` directory, and modify the QE input file `diamond-scf.in` as necessary to maintain convergence
+
+### diamond-bands Usage
+
+Run the `diamond-bands.py` script in the `diamond-bands` directory to automatically calculate the self-consistent field electron density, and to calculate the band structure across the various k-points defined in `diamond-bands-make.in`.
+
+### graphene-bands Usage
+
+Run the `graphene-bands.py` script in the `graphene-bands` directory to automatically calculate the self-consistent field electron density, and to calculate the band structure across the various k-points defined in `graphene-bands-make.in`.
+
+### methane Usage
+
+Simply run the command `rw.x < methane.in > methane.out` to have Quantum Espresso optimize the methane structure! To change the initial guess, generate new hydrogren positions via `initial-positions.py` and copy/paste them into the `ATOMIC_POSITIONS` in the `methane.in` file. To visualize the data, load the output file into XCrysgen
+
 ## Table of Contents
 
 ### diamond-scf Contents
@@ -81,25 +103,3 @@ A set of four quantum espresso simulation configurations to solve for various ma
 
 * `methane.out` - QE output file giving final methane binding energy and atomic positions
 * `tmp` - Temporary directory which stores the solved e-density
-
-## Installation
-
-Install the latest Python and Quantum Espresso (QE) versions, and ensure the QE binaries `pw.x` and `bands.x` are your `$PATH` variable.
-
-## Usage
-
-### diamond-scf Usage
-
-Run the `e-cutoff.py`,`k-points.py`, and `lattice.py` scripts in the `diamond-scf` directory, and modify the QE input file `diamond-scf.in` as necessary to maintain convergence
-
-### diamond-bands Usage
-
-Run the `diamond-bands.py` script in the `diamond-bands` directory to automatically calculate the self-consistent field electron density, and to calculate the band structure across the various k-points defined in `diamond-bands-make.in`.
-
-### graphene-bands Usage
-
-Run the `graphene-bands.py` script in the `graphene-bands` directory to automatically calculate the self-consistent field electron density, and to calculate the band structure across the various k-points defined in `graphene-bands-make.in`.
-
-### methane Usage
-
-Simply run the command `rw.x < methane.in > methane.out` to have Quantum Espresso optimize the methane structure! To change the initial guess, generate new hydrogren positions via `initial-positions.py` and copy/paste them into the `ATOMIC_POSITIONS` in the `methane.in` file. To visualize the data, load the output file into XCrysgen
