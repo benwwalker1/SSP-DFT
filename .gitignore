@@ -1,2 +1,8 @@
 *.code-workspace
 *.DS_Store
+gao2014.pdf
+*.png
+tmp/
+e_cutoff-run_files
+k_points-run_files
+lattice-run_files
