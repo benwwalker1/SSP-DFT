@@ -38,7 +38,7 @@ for x in range(1, 9):
         os.remove(file)
 
 # Read the CSV file
-data = pd.read_csv('~/Documents/shared/k-outputs.out')
+data = pd.read_csv('k-outputs.out')
 
 # Extract the variables from the CSV columns
 variable1 = data['k_point']

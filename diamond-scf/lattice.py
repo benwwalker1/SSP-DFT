@@ -47,7 +47,7 @@ for i in range(num_steps + 1):
 
 
 #read the outputs file
-lattice_data = pd.read_csv('~/Documents/shared/lattice_outputs.out')
+lattice_data = pd.read_csv('lattice_outputs.out')
 
 # Extract the variables from the CSV columns
 volume = (lattice_data['lattice_const']**3)/4 #converts lattice const to volume of cell

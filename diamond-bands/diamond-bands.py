@@ -2,6 +2,27 @@ import numpy as np
 import subprocess
 import matplotlib.pyplot as plt
 
+
+path = [
+    [0.25, 0.5, -0.25, 20],    # W
+    [0, 0.5, 0, 20],            # L
+    [0, 0, 0, 20],              # GAMMA
+    [0, -0.5, -0.5, 20],        # X
+    [-0.25, -0.5, -0.75, 20],   # W
+    [-0.375, -0.375, -0.75, 20] # K
+]
+
+distances = []
+for i in range(len(path) - 1):
+    x1, y1, z1, _ = path[i]
+    x2, y2, z2, _ = path[i + 1]
+    distance = ((x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2) ** 0.5
+    distances.append(distance)
+
+normalized_distances = [int(30*(distance / max(distances))) for distance in distances]
+successive_distances_sum = [0] + [sum(normalized_distances[:i+1]) for i in range(len(distances))]
+markers = ['W', 'L', '\u03B3', 'X','W', 'K']
+
 # Run self-consistient field for the diamond structure to get electron density
 pw_command = "pw.x < diamond-scf.in > diamond-scf.out"
 subprocess.run(pw_command, shell=True)
@@ -36,20 +57,31 @@ if series:
 # Plot the data
 for series in data:
     k_vector, energy = zip(*series)
+    energy = [e-13.2908 for e in energy]   
     plt.plot(range(len(k_vector)), energy)
+    print(successive_distances_sum[2],energy[successive_distances_sum[2]])
+    print(successive_distances_sum[3],energy[successive_distances_sum[3]])
 
+k_vector, c_energy = zip(*data[4])
+k_vector, c2_energy = zip(*data[5])
+k_vector, v_energy = zip(*data[3])
+indirect_bandgap = min(abs(min(c2_energy)-max(v_energy)),abs(min(c_energy-max(v_energy))))
+print("Indirect Bandgap:", indirect_bandgap)
+direct_bandgap = c_energy[successive_distances_sum[2]]-v_energy[successive_distances_sum[2]]
+print("Direct Bandgap:", direct_bandgap)
 #plt.xlabel("k-vector")
 plt.ylabel("Energy (eV)")
-plt.title("Diamond Band Structure")
 
-markers = ['W', 'L', '\u03B3', 'X', 'W', 'K']
-# Add text and vertical lines for every 20 data points
-for i in range(6):
-    text_position = 20*i
+# Add text and vertical lines for every data point
+for i in range(len(markers)):
+    text_position = successive_distances_sum[i]
     text_label = markers[i]
-    plt.text(text_position, -13, text_label, ha='center')
+    plt.text(text_position, -26.3, text_label, ha='center')
     plt.axvline(x=text_position, color='gray', linestyle='--')
 
 plt.xticks([])
+plt.xlim(0, max(successive_distances_sum))  # Set the x-axis limits
 
 plt.show()
+
+

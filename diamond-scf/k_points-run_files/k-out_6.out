@@ -1,5 +1,5 @@
 
-     Program PWSCF v.6.6 starts on 19Dec2023 at 23:37:20 
+     Program PWSCF v.6.6 starts on  5Jan2024 at 11: 9: 1 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -132,7 +132,7 @@
      Davidson diagonalization with overlap
      ethr =  1.00E-02,  avg # of iterations =  2.0
 
-     total cpu time spent up to now is        0.5 secs
+     total cpu time spent up to now is        0.9 secs
 
      total energy              =     -24.06757125 Ry
      estimated scf accuracy    <       0.10693698 Ry
@@ -141,7 +141,7 @@
      Davidson diagonalization with overlap
      ethr =  1.34E-03,  avg # of iterations =  1.3
 
-     total cpu time spent up to now is        0.6 secs
+     total cpu time spent up to now is        1.4 secs
 
      total energy              =     -24.07383258 Ry
      estimated scf accuracy    <       0.00370880 Ry
@@ -150,7 +150,7 @@
      Davidson diagonalization with overlap
      ethr =  4.64E-05,  avg # of iterations =  2.9
 
-     total cpu time spent up to now is        0.9 secs
+     total cpu time spent up to now is        1.8 secs
 
      total energy              =     -24.07534986 Ry
      estimated scf accuracy    <       0.00008377 Ry
@@ -159,7 +159,7 @@
      Davidson diagonalization with overlap
      ethr =  1.05E-06,  avg # of iterations =  5.0
 
-     total cpu time spent up to now is        1.2 secs
+     total cpu time spent up to now is        2.3 secs
 
      total energy              =     -24.07544786 Ry
      estimated scf accuracy    <       0.00001203 Ry
@@ -168,7 +168,7 @@
      Davidson diagonalization with overlap
      ethr =  1.50E-07,  avg # of iterations =  2.5
 
-     total cpu time spent up to now is        1.5 secs
+     total cpu time spent up to now is        2.6 secs
 
      total energy              =     -24.07545136 Ry
      estimated scf accuracy    <       0.00000093 Ry
@@ -177,7 +177,7 @@
      Davidson diagonalization with overlap
      ethr =  1.17E-08,  avg # of iterations =  3.4
 
-     total cpu time spent up to now is        1.7 secs
+     total cpu time spent up to now is        2.9 secs
 
      total energy              =     -24.07545168 Ry
      estimated scf accuracy    <       0.00000001 Ry
@@ -186,7 +186,7 @@
      Davidson diagonalization with overlap
      ethr =  1.34E-10,  avg # of iterations =  5.4
 
-     total cpu time spent up to now is        2.1 secs
+     total cpu time spent up to now is        3.3 secs
 
      End of self-consistent calculation
 
@@ -317,46 +317,46 @@
 
      Writing output data file ./tmp/diamond.save/
 
-     init_run     :      1.28s CPU      0.19s WALL (       1 calls)
-     electrons    :     16.57s CPU      1.81s WALL (       1 calls)
+     init_run     :      1.35s CPU      0.22s WALL (       1 calls)
+     electrons    :     22.65s CPU      3.03s WALL (       1 calls)
 
      Called by init_run:
-     wfcinit      :      1.18s CPU      0.13s WALL (       1 calls)
-     potinit      :      0.02s CPU      0.01s WALL (       1 calls)
-     hinit0       :      0.07s CPU      0.04s WALL (       1 calls)
+     wfcinit      :      1.22s CPU      0.15s WALL (       1 calls)
+     potinit      :      0.03s CPU      0.02s WALL (       1 calls)
+     hinit0       :      0.08s CPU      0.05s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :     15.22s CPU      1.52s WALL (       7 calls)
-     sum_band     :      1.18s CPU      0.21s WALL (       7 calls)
-     v_of_rho     :      0.16s CPU      0.08s WALL (       8 calls)
+     c_bands      :     21.89s CPU      2.73s WALL (       7 calls)
+     sum_band     :      0.60s CPU      0.21s WALL (       7 calls)
+     v_of_rho     :      0.17s CPU      0.10s WALL (       8 calls)
      mix_rho      :      0.01s CPU      0.01s WALL (       7 calls)
 
      Called by c_bands:
-     init_us_2    :      0.34s CPU      0.04s WALL (     420 calls)
-     cegterg      :     14.41s CPU      1.44s WALL (     196 calls)
+     init_us_2    :      0.30s CPU      0.04s WALL (     420 calls)
+     cegterg      :     21.27s CPU      2.66s WALL (     196 calls)
 
      Called by *egterg:
-     cdiaghg      :      0.18s CPU      0.02s WALL (     824 calls)
-     h_psi        :     14.71s CPU      1.46s WALL (     852 calls)
-     g_psi        :      0.02s CPU      0.01s WALL (     628 calls)
+     cdiaghg      :      0.19s CPU      0.03s WALL (     824 calls)
+     h_psi        :     21.28s CPU      2.68s WALL (     852 calls)
+     g_psi        :      0.04s CPU      0.01s WALL (     628 calls)
 
      Called by h_psi:
-     h_psi:calbec :      1.65s CPU      0.15s WALL (     852 calls)
-     vloc_psi     :     11.66s CPU      1.17s WALL (     852 calls)
-     add_vuspsi   :      1.35s CPU      0.14s WALL (     852 calls)
+     h_psi:calbec :      6.24s CPU      0.78s WALL (     852 calls)
+     vloc_psi     :      9.16s CPU      1.16s WALL (     852 calls)
+     add_vuspsi   :      5.82s CPU      0.72s WALL (     852 calls)
 
      General routines
-     calbec       :      1.63s CPU      0.15s WALL (     852 calls)
-     fft          :      0.07s CPU      0.04s WALL (      80 calls)
+     calbec       :      6.21s CPU      0.78s WALL (     852 calls)
+     fft          :      0.08s CPU      0.05s WALL (      80 calls)
      ffts         :      0.01s CPU      0.00s WALL (       7 calls)
-     fftw         :     10.78s CPU      1.13s WALL (    6554 calls)
+     fftw         :      8.15s CPU      1.12s WALL (    6554 calls)
 
      Parallel routines
 
-     PWSCF        :     17.99s CPU      2.07s WALL
+     PWSCF        :     24.13s CPU      3.33s WALL
 
 
-   This run was terminated on:  23:37:22  19Dec2023            
+   This run was terminated on:  11: 9: 4   5Jan2024            
 
 =------------------------------------------------------------------------------=
    JOB DONE.

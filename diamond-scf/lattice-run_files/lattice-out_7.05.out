@@ -1,5 +1,5 @@
 
-     Program PWSCF v.6.6 starts on 19Dec2023 at 23:38:35 
+     Program PWSCF v.6.6 starts on  5Jan2024 at 15:14:57 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -106,7 +106,7 @@
      starting charge    7.99991, renormalised to    8.00000
      Starting wfcs are    8 randomized atomic wfcs
 
-     total cpu time spent up to now is        0.2 secs
+     total cpu time spent up to now is        0.3 secs
 
      Self-consistent Calculation
 
@@ -120,7 +120,7 @@
      Davidson diagonalization with overlap
      ethr =  9.71E-04,  avg # of iterations =  1.2
 
-     total cpu time spent up to now is        0.3 secs
+     total cpu time spent up to now is        0.7 secs
 
      total energy              =     -24.05214127 Ry
      estimated scf accuracy    <       0.08234687 Ry
@@ -129,7 +129,7 @@
      Davidson diagonalization with overlap
      ethr =  1.03E-03,  avg # of iterations =  1.0
 
-     total cpu time spent up to now is        0.4 secs
+     total cpu time spent up to now is        0.9 secs
 
      total energy              =     -24.05690902 Ry
      estimated scf accuracy    <       0.00240494 Ry
@@ -138,7 +138,7 @@
      Davidson diagonalization with overlap
      ethr =  3.01E-05,  avg # of iterations =  2.6
 
-     total cpu time spent up to now is        0.5 secs
+     total cpu time spent up to now is        1.0 secs
 
      total energy              =     -24.05762737 Ry
      estimated scf accuracy    <       0.00007266 Ry
@@ -147,7 +147,7 @@
      Davidson diagonalization with overlap
      ethr =  9.08E-07,  avg # of iterations =  4.7
 
-     total cpu time spent up to now is        0.6 secs
+     total cpu time spent up to now is        1.2 secs
 
      total energy              =     -24.05770173 Ry
      estimated scf accuracy    <       0.00000114 Ry
@@ -156,7 +156,7 @@
      Davidson diagonalization with overlap
      ethr =  1.43E-08,  avg # of iterations =  5.0
 
-     total cpu time spent up to now is        0.7 secs
+     total cpu time spent up to now is        1.4 secs
 
      total energy              =     -24.05770338 Ry
      estimated scf accuracy    <       0.00000006 Ry
@@ -165,7 +165,7 @@
      Davidson diagonalization with overlap
      ethr =  7.33E-10,  avg # of iterations =  3.3
 
-     total cpu time spent up to now is        0.8 secs
+     total cpu time spent up to now is        1.6 secs
 
      total energy              =     -24.05770341 Ry
      estimated scf accuracy    <       0.00000002 Ry
@@ -174,7 +174,7 @@
      Davidson diagonalization with overlap
      ethr =  2.07E-10,  avg # of iterations =  2.3
 
-     total cpu time spent up to now is        0.9 secs
+     total cpu time spent up to now is        1.7 secs
 
      End of self-consistent calculation
 
@@ -233,46 +233,46 @@
 
      Writing output data file ./tmp/diamond.save/
 
-     init_run     :      0.57s CPU      0.10s WALL (       1 calls)
-     electrons    :      6.81s CPU      0.72s WALL (       1 calls)
+     init_run     :      1.10s CPU      0.19s WALL (       1 calls)
+     electrons    :     11.45s CPU      1.49s WALL (       1 calls)
 
      Called by init_run:
-     wfcinit      :      0.47s CPU      0.05s WALL (       1 calls)
+     wfcinit      :      1.01s CPU      0.14s WALL (       1 calls)
      potinit      :      0.02s CPU      0.01s WALL (       1 calls)
-     hinit0       :      0.08s CPU      0.04s WALL (       1 calls)
+     hinit0       :      0.06s CPU      0.03s WALL (       1 calls)
 
      Called by electrons:
-     c_bands      :      5.28s CPU      0.53s WALL (       8 calls)
-     sum_band     :      0.84s CPU      0.08s WALL (       8 calls)
-     v_of_rho     :      0.68s CPU      0.11s WALL (       8 calls)
-     mix_rho      :      0.02s CPU      0.01s WALL (       8 calls)
+     c_bands      :     10.42s CPU      1.30s WALL (       8 calls)
+     sum_band     :      0.60s CPU      0.09s WALL (       8 calls)
+     v_of_rho     :      0.38s CPU      0.08s WALL (       8 calls)
+     mix_rho      :      0.06s CPU      0.01s WALL (       8 calls)
 
      Called by c_bands:
-     init_us_2    :      0.21s CPU      0.02s WALL (     170 calls)
-     cegterg      :      5.02s CPU      0.50s WALL (      80 calls)
+     init_us_2    :      0.12s CPU      0.02s WALL (     170 calls)
+     cegterg      :     10.15s CPU      1.26s WALL (      80 calls)
 
      Called by *egterg:
-     cdiaghg      :      0.07s CPU      0.01s WALL (     291 calls)
-     h_psi        :      5.19s CPU      0.50s WALL (     311 calls)
+     cdiaghg      :      0.08s CPU      0.01s WALL (     291 calls)
+     h_psi        :     10.63s CPU      1.34s WALL (     311 calls)
      g_psi        :      0.02s CPU      0.00s WALL (     221 calls)
 
      Called by h_psi:
-     h_psi:calbec :      0.35s CPU      0.04s WALL (     311 calls)
-     vloc_psi     :      4.65s CPU      0.44s WALL (     311 calls)
-     add_vuspsi   :      0.17s CPU      0.02s WALL (     311 calls)
+     h_psi:calbec :      3.81s CPU      0.46s WALL (     311 calls)
+     vloc_psi     :      3.72s CPU      0.48s WALL (     311 calls)
+     add_vuspsi   :      3.08s CPU      0.40s WALL (     311 calls)
 
      General routines
-     calbec       :      0.34s CPU      0.04s WALL (     311 calls)
-     fft          :      0.22s CPU      0.04s WALL (      81 calls)
-     ffts         :      0.02s CPU      0.00s WALL (       8 calls)
-     fftw         :      4.46s CPU      0.42s WALL (    2510 calls)
+     calbec       :      3.81s CPU      0.46s WALL (     311 calls)
+     fft          :      0.20s CPU      0.05s WALL (      81 calls)
+     ffts         :      0.04s CPU      0.00s WALL (       8 calls)
+     fftw         :      3.55s CPU      0.46s WALL (    2510 calls)
 
      Parallel routines
 
-     PWSCF        :      7.51s CPU      0.90s WALL
+     PWSCF        :     12.66s CPU      1.75s WALL
 
 
-   This run was terminated on:  23:38:36  19Dec2023            
+   This run was terminated on:  15:14:58   5Jan2024            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
