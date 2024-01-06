@@ -3,10 +3,10 @@ import subprocess
 import matplotlib.pyplot as plt
 
 path = [
+    [0.5, -0.5, 0, 20],      # M
     [0, 0, 0, 20],              # GAMMA
-    [0.66666666, -0.33333333, -0.500000, 20],   # K
-    [0.5, -0.5, -0.5, 20],      # M
-    [0, 0, 0, 20]               # GAMMA
+    [0.66666666, -0.33333333, 0, 20],   # K
+    [0.5, -0.5, 0, 20]      # M
 ]
 distances = []
 for i in range(len(path) - 1):
@@ -16,9 +16,9 @@ for i in range(len(path) - 1):
     distances.append(distance)
 
 normalized_distances = [int(40*(distance / max(distances))) for distance in distances]
-normalized_distances[1] = 20
+normalized_distances[2] = 20
 successive_distances_sum = [0] + [sum(normalized_distances[:i+1]) for i in range(len(distances))]
-
+print(normalized_distances)
 
 # Get scf calculation, save e-density to the tmp folder
 pw_command = "pw.x < graphene-scf.in > graphene-scf.out"
@@ -59,7 +59,7 @@ for series in data:
 #plt.xlabel("k-vector")
 plt.ylabel("Energy (eV)")
 
-markers = ['$\Gamma$','K','M','$\Gamma$']
+markers = ['M','$\Gamma$','K','M']
 # Add text and vertical lines for every 20 data points
 
 for i in range(len(markers)):

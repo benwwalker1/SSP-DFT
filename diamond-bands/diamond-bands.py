@@ -21,7 +21,7 @@ for i in range(len(path) - 1):
 
 normalized_distances = [int(30*(distance / max(distances))) for distance in distances]
 successive_distances_sum = [0] + [sum(normalized_distances[:i+1]) for i in range(len(distances))]
-markers = ['W', 'L', '\u03B3', 'X','W', 'K']
+markers = ['W', 'L', '$\Gamma$', 'X','W', 'K']
 
 # Run self-consistient field for the diamond structure to get electron density
 pw_command = "pw.x < diamond-scf.in > diamond-scf.out"

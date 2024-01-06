@@ -1,5 +1,5 @@
 
-     Program BANDS v.6.6 starts on  6Jan2024 at 13:19:43 
+     Program BANDS v.6.6 starts on  6Jan2024 at 17:50:31 
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -31,10 +31,10 @@
      Sum         439     439    139                30493    30493    5091
 
      Reading collected, re-writing distributed wavefunctions
-     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   0.0000
-     high-symmetry point:  0.6667 0.0000-0.1250   x coordinate   0.6783
-     high-symmetry point:  0.5000-0.2887-0.1250   x coordinate   1.0116
-     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   1.6023
+     high-symmetry point:  0.5000-0.2887 0.0000   x coordinate   0.0000
+     high-symmetry point:  0.0000 0.0000 0.0000   x coordinate   0.5774
+     high-symmetry point:  0.6667 0.0000 0.0000   x coordinate   1.2440
+     high-symmetry point:  0.5000-0.2887 0.0000   x coordinate   1.5774
 
      Plottable bands (eV) written to file bandsdata.gnu
      Bands written to file bandsdata
