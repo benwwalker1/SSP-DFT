@@ -3,6 +3,8 @@
 &control
     calculation = 'relax'
     restart_mode='from_scratch',
+    forc_conv_thr = 1.0d-3
+    etot_conv_thr = 1.0d-4
     prefix='graphene',
     pseudo_dir = './',
     outdir='./tmp/'
@@ -16,7 +18,7 @@
     /
 &electrons
     diagonalization='david'
-    conv_thr =  1.0d-8
+    conv_thr =  1.0d-9
     /
 &IONS
     ion_dynamics = 'bfgs',
@@ -31,3 +33,19 @@ ATOMIC_POSITIONS {angstrom} !from `initial-positions.py`
     H 0.88982311  0.51373961 -0.36384948
     H -0.88982311  0.51373961 -0.36384948
 K_POINTS {gamma}
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+    H-C-H Bond Angle & C-H Bond Length \\
+    \hline
+    109.488 & 1.0941 \\
+    109.488 & 1.0941 \\
+    109.455 & 1.0941 \\
+    109.455 & 1.0941 \\
+    \hline
+    \end{tabular}
+    \caption*{Final Methane Structure}
+    \label{tab:methane-structure}
+\end{table}
