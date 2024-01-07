@@ -28,6 +28,8 @@ Simply run the command `rw.x < methane.in > methane.out` to have Quantum Espress
 
 ## Table of Contents
 
+* `test.py` - Little script which runs all simulations included in this repository
+
 ### diamond-scf Contents
 
 #### Input Files - Diamond Self-Consistent Field
