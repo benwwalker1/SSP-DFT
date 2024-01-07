@@ -8,3 +8,5 @@ k_points-run_files
 lattice-run_files
 CRASH
 runfiles
+*.zip
+LAB_REPORT*
