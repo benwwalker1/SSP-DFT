@@ -18,7 +18,6 @@ for i in range(len(path) - 1):
 normalized_distances = [int(40*(distance / max(distances))) for distance in distances]
 normalized_distances[2] = 20
 successive_distances_sum = [0] + [sum(normalized_distances[:i+1]) for i in range(len(distances))]
-print(normalized_distances)
 
 # Get scf calculation, save e-density to the tmp folder
 pw_command = "pw.x < graphene-scf.in > graphene-scf.out"

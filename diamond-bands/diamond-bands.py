@@ -59,16 +59,14 @@ for series in data:
     k_vector, energy = zip(*series)
     energy = [e-13.2908 for e in energy]   
     plt.plot(range(len(k_vector)), energy)
-    print(successive_distances_sum[2],energy[successive_distances_sum[2]])
-    print(successive_distances_sum[3],energy[successive_distances_sum[3]])
 
 k_vector, c_energy = zip(*data[4])
 k_vector, c2_energy = zip(*data[5])
 k_vector, v_energy = zip(*data[3])
 indirect_bandgap = min(abs(min(c2_energy)-max(v_energy)),abs(min(c_energy-max(v_energy))))
-print("Indirect Bandgap:", indirect_bandgap)
-direct_bandgap = c_energy[successive_distances_sum[2]]-v_energy[successive_distances_sum[2]]
-print("Direct Bandgap:", direct_bandgap)
+print(f"Indirect Bandgap: {indirect_bandgap:.3f} eV")
+direct_bandgap = c_energy[successive_distances_sum[2]] - v_energy[successive_distances_sum[2]]
+print(f"Direct Bandgap: {direct_bandgap:.3f} eV")
 #plt.xlabel("k-vector")
 plt.ylabel("Energy (eV)")
 
