@@ -10,3 +10,8 @@ CRASH
 runfiles
 *.zip
 LAB_REPORT*
+*.out
+*.gnu
+bandsdata
+*.rap
+input_tmp.in
